@@ -9,20 +9,36 @@ public class ArrayListDemo {
 		List<String> fruits=new ArrayList<>();
 		fruits.add("Apple");
 		fruits.add("Mango");
-		fruits.add("Dragon Fruit");
+		fruits.add("Dragon");
         
 		System.out.println(fruits);
-		System.out.println("Second Fruit :"+fruits.get(1));
-		fruits.set(1, "Cherry");
-		fruits.remove(2);
 		
-		if(fruits.contains("Mango"));
+		System.out.println("Second Fruit :"+fruits.get(1));
+		
+		fruits.set(1, "Cherry");
+		System.out.println(fruits);
+		
+		fruits.remove(2);
+		System.out.println("After removing "+fruits);
+		
+		
+		if(fruits.contains("Mango"))
 		{
-			System.out.println(" Mango is in the list");
+			System.out.println("Requested fruit is present");
+		}else
+		{
+			System.out.println("Requested fruit is not prsent");
 		}
+		
+		// Using Iterable
+        Iterable<String> iterableFruits = fruits;
+
+        System.out.println("Traversing using Iterable:"+fruits);
+        
+        //using for-each loop also you can traverse
 		for(String fruit:fruits)
 		{
-			System.out.println(fruits);
+			System.out.println("Traversing using for-each loop "+fruit);
 		}
 	}
 
