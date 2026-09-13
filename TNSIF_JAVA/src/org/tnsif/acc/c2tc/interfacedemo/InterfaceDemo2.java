@@ -1,3 +1,5 @@
+package org.tnsif.acc.c2tc.interfacedemo;
+
 interface MathOp {
     int operate(int a, int b);
 }
@@ -14,7 +16,7 @@ class Sub implements MathOp {
     }
 }
 
-public class Main {
+public class InterfaceDemo2 {
     public static void main(String[] args) {
 
         MathOp obj;
@@ -26,3 +28,4 @@ public class Main {
         System.out.println(obj.operate(10, 5));  // 5
     }
 }
+
